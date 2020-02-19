@@ -24,6 +24,17 @@ public class Fase4 {
 		}
 		
 		System.out.println(listLastName);
+		
+		ArrayList<Character> fullName = new ArrayList<Character>();
+		
+		fullName.addAll(listName);
+		fullName.addAll(listLastName);
+		fullName.add(listName.size(),' ');
+		
+		System.out.println(fullName);
+		
+		
+		
 	}
 
 }
