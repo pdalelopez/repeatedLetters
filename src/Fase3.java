@@ -8,9 +8,10 @@ public class Fase3 {
 		
 		HashMap<Character, Integer> nameMap = new HashMap<Character, Integer>();
 		
-		String name = "PEPE";
+		String name = "PEREZ";
 		
 		//generating the ArrayList since String (name) and printing it
+		
 		ArrayList<Character> listName = new ArrayList<Character>();
 		
 		for (int i=0; i< name.length(); i++) {
@@ -19,6 +20,23 @@ public class Fase3 {
 		}
 		
 		System.out.println(listName);
+		
+		
+		// comparing each char with every others and creating the map
+		for (int i=0; i<listName.size(); i++) {
+			
+			int letterRepeat = 0;
+			
+			for( int j=0; j<listName.size(); j++) {
+				
+				
+				if (listName.get(i)==listName.get(j)) { 
+					letterRepeat = letterRepeat+1;
+					}
+				nameMap.put(listName.get(i),letterRepeat);
+			}
+		}
+		System.out.println(nameMap);
 	}
 
 }
